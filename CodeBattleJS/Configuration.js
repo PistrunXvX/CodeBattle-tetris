@@ -21,7 +21,7 @@
  */
 // Tune you application here
 const connectionString =
-  "http://codebattle2020.westeurope.cloudapp.azure.com/codenjoy-contest/board/player/wt8xg293vd9fvdms1hod?code=3435474186761516079&gameName=tetris";
+  "http://codebattle2020.westeurope.cloudapp.azure.com/codenjoy-contest/board/player/o32kdkq77crgc1tdxzsc?code=1238602380184003883&gameName=tetris";
 const isAdditionalLoggingEnabled = true;
 const connectionTimeout = 1000; // mS
 

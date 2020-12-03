@@ -43,6 +43,52 @@ class Solver {
   
   get(board) {
     // TODO your code here
+    let boardPositionFree = board.getFreeSpace();
+    let blockFigure = board.getFigures();
+    let currentFigure = board.getCurrentFigureType();
+    let currentFigurePosition = board.getCurrentFigurePosition();
+    let allSize = board.getAllExtended();
+    // console.log(boardPositionFree + "");
+    // console.log(currentFigure + "");
+    let position = [0, 0];
+    let moveStep = 8;
+    // this.addActionStep(this.directions.DOWN, 1);
+    switch (currentFigure) {
+      case 'O':
+        // for (let i = 0; i <= blockFigure.length; i++) {
+        //   // if (blockFigure[i] != [x, y]){
+        //   //   this.addActionStep(this.directions.RIGHT, 1);
+        //   //   if (board.isNear(currentFigurePosition[0], currentFigurePosition[1], this.elements)) {
+        //   //     this.addActionStep(this.directions.DOWN, 1);
+        //   //     break;
+        //   //   }
+        //   //   break;
+        //   // }
+        //   if (blockFigure[i] != [x, y]){
+        //     this.addActionStep(this.directions.RIGHT, 2);
+        //     console.log(board.isNear(currentFigurePosition[0], currentFigurePosition[1], this.elements) + "");
+        //     if (board.isNear(currentFigurePosition[0], currentFigurePosition[1], this.elements.YELLOW)) {
+        //        this.addActionStep(this.directions.DOWN, 1);
+        //     }
+        //     break;
+        //   } else {
+        //     this.addActionStep(this.directions.LEFT, 2);
+        //     this.addActionStep(this.directions.DOWN, 1);
+        //   }
+        // }
+
+        for (let i = 0; i < boardPositionFree.length; i++) {
+          if (boardPositionFree[i] != [x, y]) {
+            this.addActionStep(this.directions.LEFT, 1);
+            break;
+          }
+        }
+        break;
+      case 'I':
+        alert("Lox");
+        break;
+    }
+    
     return this.actions.join(', ');
   }
 }
