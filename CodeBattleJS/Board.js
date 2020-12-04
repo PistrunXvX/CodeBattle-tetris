@@ -116,7 +116,9 @@ class Board {
   getCurrentFigurePosition = () => {
     const x = this.board.currentFigurePoint.x;
     const y = this.board.currentFigurePoint.y;
-    return new Point(x, y, this.getAt(x, y));
+    // return new Point(x, y, this.getAt(x, y));
+    let result = [x, y];
+    return result;
   }
 
   // Метод для получения всех точек фигуры при ее расположении в заданой координате с заданным поворотом.
